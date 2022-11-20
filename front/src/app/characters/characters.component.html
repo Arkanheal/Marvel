@@ -1,0 +1,9 @@
+<h2>Characters (Starting from 100)</h2>
+<ul class="characters">
+  <li *ngFor="let char of characters">
+    <button [class.selected]="char === selectedCharacter" type="button" (click)="onSelect(char)">
+      <img src="{{char.pic}}" >
+      <span class="name">{{char.name}}</span>
+    </button>
+  </li>
+</ul>
