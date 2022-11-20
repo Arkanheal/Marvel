@@ -17,10 +17,6 @@ describe("#getCharactersValid", () => {
         expect(data[0].id).toEqual(1009175);
         expect(data[19].name).toEqual("Big Bertha");
     });
-
-    afterEach(() => {
-        jest.restoreAllMocks();
-    });
 });
 
 describe("#getCharactersError", () => {
@@ -40,9 +36,5 @@ describe("#getCharactersError", () => {
         expect(data.error).toEqual(
             "You must pass an integer limit greater than 0.",
         );
-    });
-
-    afterEach(() => {
-        jest.restoreAllMocks();
     });
 });
