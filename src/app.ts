@@ -7,6 +7,15 @@ import express from "express";
 const app = express();
 const port = 5000;
 
+// CORS
+import cors from "cors";
+
+const options: cors.CorsOptions = {
+    origin: ['http://localhost:4200'],
+}
+
+app.use(cors(options));
+
 // Requests import
 import { getCharacters, getComic } from "./request";
 
